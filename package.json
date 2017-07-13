@@ -1,0 +1,23 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "Final project of class DM104",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauryrv/dm104-final-project.git"
+  },
+  "author": "Maury Viana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mauryrv/dm104-final-project/issues"
+  },
+  "homepage": "https://github.com/mauryrv/dm104-final-project#readme",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
