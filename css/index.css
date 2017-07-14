@@ -108,3 +108,26 @@ input {
 	transition: box-shadow .5s ease;
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
+
+body {
+            padding-top: 50px;
+        }
+         
+        #divTotal {
+            background-color: green;
+        }
+         
+        .affix {
+            right: 0px;
+        }
+         
+        .affix-top {
+            right: 0px;
+            position: fixed;
+        }
+         
+        .scroll-debug {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
