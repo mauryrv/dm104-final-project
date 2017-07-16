@@ -40,48 +40,50 @@
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Erro:</p>
                                     <span></span>
-                                </div>                                
+                                </div>      
+                                <input type="hidden" id="hdnID"/>                         
                                 <div class="form-group">
                                     <label for="firstname" class="col-md-3 control-label">Nome Completo</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="firstname" >
+                                        <input type="text" class="form-control"  name="firstname" placeholder="Nome" id="txtName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="lastname" class="col-md-3 control-label">CPF</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="lastname" >
+                                        <input type="text" class="form-control" name="lastname" id="txtCpf" placeholder="Apenas números, ex: 00011122233">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="endereco" class="col-md-3 control-label">Endereço</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="endereco" >
+                                        <input type="text" class="form-control" name="endereco" id="txtAddress" placeholder="Ex: Rua, Nº, Bairro, Cidade, Estado">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="email" class="col-md-3 control-label">E-mail</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="email" >
+                                        <input type="text" class="form-control" name="email" id="txtMail" placeholder="exemplo@gmail.com">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-md-3 control-label">Senha</label>
                                     <div class="col-md-9">
-                                        <input type="password" class="form-control" name="passwd" placeholder="">
+                                        <input type="password" class="form-control" id="txtPassword" name="passwd" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-md-3 control-label">Repita a Senha</label>
                                     <div class="col-md-9">
-                                        <input type="password" class="form-control" name="passwd2" placeholder="">
+                                        <input type="password" class="form-control" id="txtPassword2" name="passwd2" placeholder="">
                                     </div>
                                 </div>
+ 
  
                                 <div class="form-group">
                                    
                                     <div class="col-md-offset-3 col-md-9">
-                                        <button id="btn-edit" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Editar</button>
+                                        <button id="btn-edit" onclick="edit()" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Editar</button>
                                     </div>
                                 </div>
       
@@ -95,8 +97,12 @@
 </body>
 
    <script src="node_modules/jquery/dist/jquery.min.js"></script>  
-   <script src="external-js/ui.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app/userDAO.js"></script>
+  <script src="app/userEditController.js"></script>
+  
+  
+  
   
 
 </html>
