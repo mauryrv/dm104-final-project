@@ -1,6 +1,5 @@
-var id = 1 //pesquisar função de salvar sessão para guardar usuáro logado
-getUser(id);
-
+var id = getUserLogged() //pesquisar função de salvar sessão para guardar usuáro logado
+onLoadUserEdit()
 
 function edit(){
     if(checkData()){
@@ -32,4 +31,12 @@ function checkData(){
 		
 
 	return answer;
+}
+
+function onLoadUserEdit()
+{
+    
+    getUser(id);
+
+
 }

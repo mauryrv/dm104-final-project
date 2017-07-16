@@ -4,6 +4,14 @@ if(tbClientes == null){ // Caso não haja conteúdo, iniciamos um vetor vazio
 	tbClientes = [];
 }
 
+//keep the session for the user logged
+var userSession = sessionStorage.getItem("userLogged");
+userSession = JSON.parse(userSession); 
+if(userSession == null){ 
+	userSession = [];
+}
+
+
 function addCustomer(){
 	var cliente = JSON.stringify({
 	 	id   : getNewId(),
@@ -18,14 +26,14 @@ function addCustomer(){
 	tbClientes.push(cliente);
 	localStorage.setItem("tbClientes", JSON.stringify(tbClientes));
     alert("Usuário cadastrado");
-    Response.redirect("logon.html")
+    Response.redirect("login.html")
 	return true;
 }
 
 function editCustomer(userId){
 
 	tbClientes[userId-1] = JSON.stringify({
-	 	
+	 	id : 	userId,
 		Name : 	$("#txtName").val(),
 		Cpf  : $("#txtCpf").val(),
 		Email: $("#txtMail").val(),
@@ -37,7 +45,6 @@ function editCustomer(userId){
 	 
 	localStorage.setItem("tbClientes", JSON.stringify(tbClientes));
 	alert("Informações editadas.")
-	operacao = "A"; //Volta ao padrão
 	return true;
 }
 
@@ -51,7 +58,11 @@ function checkUserLogin(){
 		if(cli.Email==$("#login-username").val() && cli.Password == $("#login-password").val())
 			{
 				result = true;
-	//set session user equal user that is loggged
+				var session = JSON.stringify({
+				id   : cli.id		
+				});
+			userSession.push(session);
+			sessionStorage.setItem("userLogged", JSON.stringify(userSession));
 			}
 		
 	}
@@ -109,5 +120,33 @@ function getUser(id){
 		
 	}
 
+
+}
+
+function verifySession()
+{
+	var isLogged = false;
+
+	 for(var i in userSession){
+
+			isLogged= true;
+
+        }
+
+
+	return isLogged;
+}
+
+function getUserLogged()
+{
+	var session = JSON.parse(userSession[0]);
+	return session.id;
+
+}
+
+function EndSession()
+{
+	window.sessionStorage.clear();
+	//add clear on cart itens
 
 }

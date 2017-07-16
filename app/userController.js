@@ -1,6 +1,4 @@
-// verificar função para salvar sessão caso tenha um usuário logado o mesmo deve ser direcionado direto
-	//para index.html
-
+checkSession()
 
 function loginUser(){
 //check exist
@@ -57,6 +55,16 @@ function checkData()
 	return answer;
 }
 
+function checkSession()
+{
+	console.log("entre no checkSession")
+	if(verifySession()){
+		console.log("verifiquei log")
+		window.location.assign("index.html")
+	}
+
+
+}
 
 
 
