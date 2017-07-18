@@ -16,13 +16,9 @@
         <!--[if gt IE 8]><!-->
             <link rel="stylesheet" href="css/side-menu.css">
         <!--<![endif]-->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-
-
-
-
-
 
 <div id="layout">
     <!-- Menu toggle -->
@@ -51,48 +47,200 @@
 
     <div id="main">
         <div class="header">
-            <h1>Page Title</h1>
-            <h2>A subtitle for your page goes here</h2>
+            <h1>Tenis Store</h1>
+            <h2>Aqui você encontra os melhores tênis do mercado</h2>
         </div>
 
-        <div class="content">
-            <h2 class="content-subhead">How to use this layout</h2>
-            <p>
-                To use this layout, you can just copy paste the HTML, along with the CSS in <a href="/css/layouts/side-menu.css" alt="Side Menu CSS">side-menu.css</a>, and the JavaScript in <a href="/js/ui.js">ui.js</a>. The JS file uses vanilla JavaScript to simply toggle an <code>active</code> class that makes the menu responsive.
-            </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Asics Masculino' alt='Tênis Asics Masculino' src='images/tenis_asics.jpg' width="254" height="254" />
+                    </p>
 
-            <h2 class="content-subhead">Now Let's Speak Some Latin</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-
-            <div class="pure-g">
-                
-                <div class="pure-u-1-4">
+                    <div class="name" itemprop="name">Tênis Asics Masculino</div>
+                    <p>
+                        <strong>R$ 459,90</strong>    
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(1)"></button>
+                        </div>
+                    </p>
                     
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
                 </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
-                </div>
-                <div class="pure-u-1-4">
-                    <img class="pure-img-responsive" src="http://farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
-                </div>
-            </div>
+            
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Nike Masculino' alt='Tênis Nike Masculino' src='images/tenis_nike.jpg' width="254" height="254" />
+                    </p>
 
-            <h2 class="content-subhead">Try Resizing your Browser</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+                    <div class="name" itemprop="name">Tênis Nike Masculino</div>
+                    <p>
+                        <strong>R$ 229,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(2)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Preto' alt='Tênis Adidas Vs Pace Masculino - Preto' src='images/tenis_adidas.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Adidas Masculino</div>
+                    <p>
+                        <strong>R$ 199,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(3)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_adidas2.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Adidas Masculino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(4)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_nike2.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Nike Masculino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(5)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_adidas3.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Adidas Feminino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(6)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_asics2.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Asics Masculino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(7)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_nike3.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Nike Feminino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(8)"></button>
+                        </div>
+                    </p>
+                </div>
+                
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_asics3.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Asics Feminino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(9)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_adidas4.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Adidas Masculino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(10)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Adidas Masculino - Branco' alt='Tênis Adidas Masculino - Branco' src='images/tenis_nike4.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Nike Masculino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(11)"></button>
+                        </div>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        <img class="lazy" title='Tênis Asics Masculino' alt='Tênis Asics Masculino' src='images/tenis_asics4.jpg' width="254" height="254" />
+                    </p>
+                
+                    <div class="name" itemprop="name">Tênis Asics Feminino</div>
+                    <p>
+                        <strong>R$ 99,90</strong>
+                        <div style="text-align:right">
+                            <button class="btn btn-outline-primary glyphicon glyphicon-shopping-cart" onclick="buy(12)"></button>
+                        </div>
+                    </p>
+                </div>
+            </div>    
+            <hr></hr>
+            <div style="background-color:cadetblue">
+                <ul class="stamps">
+                    <li class="ico-logo-nike">Nike</li>
+                    <li class="ico-logo-adidas">Adidas</li>
+                    <li class="ico-logo-asics">Asics</li>
+                </ul>
+                <!--
+               <img alt='Tênis Asics Masculino' src='images/logo_nike.png' width="100" height="100" />
+               <img alt='Tênis Asics Masculino' src='images/logo_adidas.png' width="100" height="100" />
+               <img alt='Tênis Asics Masculino' src='images/logo_asics.png' width="100" height="100" />
+               -->
+            </div>
+            
         </div>
     </div>
 </div>
 
-<script src="external-js/ui.js"></script>
-<script src="app/genController.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>  
+    <script src="external-js/ui.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="app/genController.js"></script>
+  
+<script>
+    verifySession()
+    </script>
+
 
 </body>
 </html>
