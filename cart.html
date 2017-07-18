@@ -58,8 +58,7 @@
             <h3>Itens</h3>
         </div>
  
-        <table class="table">
-
+        <table class="table" id="tbProducts">
 
             <tr>
                 <th>
@@ -129,7 +128,7 @@
          <div class="page-header">
             <h3>Frete</h3>
         </div>
-        <table class="table">
+        <table class="table" >
             <tr>
                 <td>
                     CEP
@@ -142,7 +141,7 @@
                 <td>
                     <b>Valor frete:</b>
                 </td>
-                <td>
+                <td id="freightValue">
                     <b>Rs. 25</b>
                 </td>
             </tr>
@@ -150,7 +149,7 @@
                 <td>
                     <b>Total:</b>
                 </td>
-                <td>
+                <td id="totalValue">
                     <b>Rs. 25000</b>
                 </td>
             </tr>
@@ -184,6 +183,10 @@
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="external-js/ui.js"></script>
 <script src="app/genController.js"></script>
+
+<script>
+    verifySession()
+    </script>
 </html>
 
 

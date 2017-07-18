@@ -23,6 +23,7 @@ function add()
 
 	if(result){
 		addCustomer();
+		window.location.assign("login.html");
 		}
 }
 
@@ -57,9 +58,7 @@ function checkData()
 
 function checkSession()
 {
-	console.log("entre no checkSession")
 	if(verifySession()){
-		console.log("verifiquei log")
 		window.location.assign("index.html")
 	}
 
