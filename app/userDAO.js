@@ -11,7 +11,6 @@ if(userSession == null){
 	userSession = [];
 }
 
-
 function addCustomer(){
 	var cliente = JSON.stringify({
 	 	id   : getNewId(),
@@ -97,8 +96,6 @@ function checkEmailExist(){
 	}
 
 	return result;
-
-
 }
 
 function getUser(id){
@@ -116,11 +113,21 @@ function getUser(id){
 			$("#txtAddress").val(cli.Address)
 			$("#txtPassword").val(cli.Password)
 			$("#txtPassword2").val(cli.Password)
-		}
-		
+		}	
 	}
+}
 
+function getUserName(id){
 
+	for(var i in tbClientes){
+	
+		var cli = JSON.parse(tbClientes[i]);
+
+		if(cli.id==id)
+		{
+			return cli.Name;			
+		}	
+	}
 }
 
 function verifySession()
@@ -130,7 +137,6 @@ function verifySession()
 	 for(var i in userSession){
 
 			isLogged= true;
-
         }
 
 

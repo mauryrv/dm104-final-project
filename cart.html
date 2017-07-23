@@ -8,7 +8,7 @@
     
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
         
-<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     
     
         <!--[if lte IE 8]>
@@ -37,7 +37,7 @@
                 <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
                     <a href="cart.html" class="pure-menu-link">Meu Carrinho</a>
                 </li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Meus Pedidos</a></li>
+                <li class="pure-menu-item"><a href="orders.html" class="pure-menu-link">Meus Pedidos</a></li>
                 <li class="pure-menu-item"><a href="editUser.html" class="pure-menu-link">Minha Conta</a></li>
                 <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">Sobre</a></li>
                 <li class="pure-menu-item"><a href="#" onclick="endSession()" class="pure-menu-link">Sair</a></li>
@@ -53,12 +53,12 @@
 
         <div class="content">
 
-    <div class="well">
+        <div class="well">
         <div class="page-header">
             <h3>Itens</h3>
         </div>
  
-        <table class="table" id="tbProducts">
+        <table class="table" id="tbCartItens">
 
             <tr>
                 <th>
@@ -75,54 +75,10 @@
                 <th>
                     Valor total
                 </th>
+
+            
             </tr>
 
-            <tr>
-                <td>
-                    Tenis 1
-                </td>
-
-                <td>
-                   <input type="text" id="inputqtd1" size="1px">
-                </td>
-
-                <td>
-                    Rs. 200
-                </td>
-                <td>
-                    Rs. 400
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Tenis 2
-                </td>
-                 <td>
-                   <input type="text" id="inputqtd2" size="1px">
-                </td>
-
-                <td>
-                    Rs. 500
-                </td>
-                <td>
-                    Rs. 500
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Tenis 3
-                </td>
-                 <td>
-                   <input type="text" id="inputqtd3" size="1px">
-                </td>
-
-                <td>
-                    Rs. 250
-                </td>
-                <td>
-                    Rs. 250
-                </td>
-            </tr>
         </table>
 
          <div class="page-header">
@@ -134,42 +90,38 @@
                     CEP
                 </td>
                 <td>
-                    <input type="text" id="txtFrete" size="12px"/>
+                    <input type="text"  id="txtFrete" size="12px"/>
                 </td>
             </tr>
             <tr>
                 <td>
                     <b>Valor frete:</b>
                 </td>
-                <td id="freightValue">
-                    <b>Rs. 25</b>
+                <td>
+                    <b><label id="freightValue"/>R$ 0.00</b>
                 </td>
             </tr>
             <tr>
                 <td>
                     <b>Total:</b>
                 </td>
-                <td id="totalValue">
-                    <b>Rs. 25000</b>
+                <td>
+                     <b><label id="totalValue"/></b>
+                   
                 </td>
             </tr>
         </table>
 
-        
-
-
- <div class="text-left">
-        <a type="button" class="btn btn-danger" >Calcular <span aria-hidden="true"></span></a>
- 
-    </div>
-
+        <div class="text-left">
+            <a type="button" class="btn btn-danger" onclick="calcFreight()" >Calcular <span aria-hidden="true"></span></a>
         </div>
+
+    </div>
 
 
         <div class="text-left">
-        <a type="button" class="btn btn-danger" href="#/cart">Finalizar <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
- 
-    </div>
+            <a type="button" class="btn btn-danger" onclick="finishOrder()" >Finalizar <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+        </div>
     </div>
 </div>
 
@@ -179,13 +131,20 @@
 </body>
 
 
- <script src="node_modules/jquery/dist/jquery.min.js"></script>  
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="external-js/ui.js"></script>
-<script src="app/genController.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>  
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="external-js/ui.js"></script>
+    <script src="app/UserDAO.js"></script>
+    <script src="app/genController.js"></script>
+    <script src="app/OrderDAO.js"></script>
+    <script src="app/IndexDAO.js"></script>
+    <script src="app/CartDAO.js"></script>
+    <script src="app/CartController.js"></script>
+    
 
-<script>
+    <script>
     verifySession()
+    OnLoadCart()
     </script>
 </html>
 

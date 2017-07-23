@@ -8,17 +8,17 @@ function endSession()
 {
     window.sessionStorage.clear();
     clearCartTable()
-    redirectToIndex()
+    redirectToLogin()
 
 }
 
 function clearCartTable()
 {
-    window.localStorage.removeItem("tbCarrinho"); // verificar se funciona
+    window.localStorage.removeItem("tbCarrinho"); 
 
 }
 
-function redirectToIndex()
+function redirectToLogin()
 {
 	window.location.assign("login.html")
 
@@ -30,11 +30,24 @@ function verifySession()
 
 	 for(var i in userSession){
 
+	
 			isLogged= true;
+		
 
         }
 
+		if(!isLogged)
+			redirectToLogin()
 
 	return isLogged;
 }
 
+function showUser(){
+
+	var id = getUserLogged();
+	var nameUser = getUserName(id);
+
+	var divUser = document.getElementById('perfilTitle')
+	divUser.innerHTML = nameUser;
+
+}

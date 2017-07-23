@@ -24,7 +24,7 @@ for(var i in tbCarrinho){
 	
 		var cart = JSON.parse(tbCarrinho[i]);
 
-		if(cart.id==id)
+		if(cart.idProduct==id)
 		{
             isAdded = true;
 		}
@@ -37,8 +37,10 @@ for(var i in tbCarrinho){
 
 function cartList()
 {
-
-    
-
+	return tbCarrinho;
 
 }
+
+
+
+
