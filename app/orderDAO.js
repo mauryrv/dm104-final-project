@@ -33,12 +33,10 @@ function addNewOrder(customer,freight,total)
 	localStorage.setItem("tbPedidos", JSON.stringify(tbPedidos));
 	return newOrderId;
 
-
 }
 
 function addNewOrderProduct(ordeId,cartProducts)
 {
-
 
     for(var i in cartProducts){
 
@@ -54,18 +52,12 @@ function addNewOrderProduct(ordeId,cartProducts)
 
         }
     
-    
-
     clearCartTable();
     alert("Compra realizada com sucesso!");
-    Response.redirect("index.html")
-	
+    window.location.assign("index.html")
 
 
 }
-
-
-
 
 
 function getNewOrderId(){
@@ -76,5 +68,17 @@ function getNewOrderId(){
         }
 		
 	return newid;
+
+}
+
+function getPedidos()
+{
+    return tbPedidos;
+
+}
+
+function getPedidoProduto()
+{
+    return tbPedidoProduto;
 
 }

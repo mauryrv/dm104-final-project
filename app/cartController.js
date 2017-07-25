@@ -12,7 +12,6 @@ function OnLoadCart()
 {
     list()
     calcTotal()
-    
 
 }
 
@@ -28,20 +27,14 @@ function list()
     	var cols = "";
 
 		cols += "<td>"+product.nome+"</td>";
-		cols += "<td><input type=\"text\" value=\""+cart.Qty+"\" size=\"1px\" disabled/></td>";
+		cols += "<td> <link class=\"glyphicon glyphicon-minus\" onclick=\"subtractItemQty("+cart.idProduct+","+i+","+cart.Qty+")\"/><input type=\"text\" value=\""+cart.Qty+"\" size=\"1px\" disabled/><link class=\"glyphicon glyphicon-plus\" onclick=\"addItemQty("+cart.idProduct+","+i+","+cart.Qty+")\"/></td>";
 		cols += "<td>"+product.valor+"</td>";
-		cols += "<td>"+(cart.Qty*parseInt(product.valor)).toFixed(2)+"</td>";
-		//cols += '<td>';
-		//cols += '<button onclick="RemoveTableRow(this)" type="button">Remover</button>';
-		//cols += '</td>';
+        cols += "<td>"+(cart.Qty*parseInt(product.valor)).toFixed(2)+"</td>";
+        cols +="<td><link class=\"glyphicon glyphicon-trash\" onclick=\"deleteCartIItem("+i+")\"/></td>";
 
 		newRow.append(cols);
 		$("#tbCartItens").append(newRow);
 
-    
-	
-		
-		
     }
 }
 
@@ -78,4 +71,38 @@ function finishOrder()
     var userID = getUserLogged();
     
     newOrder(userID,freight,total,tbCarrinho)
+    
 } 
+
+function subtractItemQty(id,index,qty){
+
+var newQty = qty-1;
+if(newQty <=0){
+ 
+    deleteItem(index)
+}
+else
+    {
+        editCart(id,index,newQty)
+    }
+
+    window.location.assign("cart.html")
+//OnLoadCart()
+}
+
+function addItemQty(id,index,qty){
+
+var newQty = qty+1
+console.log("qty" + newQty)
+editCart(id,index,newQty)
+
+window.location.assign("cart.html")
+
+}
+
+function deleteCartIItem(index)
+{
+deleteItem(index)
+window.location.assign("cart.html")
+
+}

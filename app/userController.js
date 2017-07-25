@@ -11,10 +11,7 @@ function loginUser(){
 		{
 			alert("Usuário ou senha inválido!")
 		}
-
-
 }
-
 function add()
 {
 //check infos are ok

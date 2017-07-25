@@ -41,6 +41,26 @@ function cartList()
 
 }
 
+function editCart(id,index,qty){
+
+	tbCarrinho[index] = JSON.stringify({
+		idProduct  : id,
+		Qty : 	qty
+
+	});
+	 
+	localStorage.setItem("tbCarrinho", JSON.stringify(tbCarrinho));
+	
+	return true;
+}
+
+function deleteItem(index){
+	tbCarrinho.splice(index, 1);
+	localStorage.setItem("tbCarrinho", JSON.stringify(tbCarrinho));
+	
+}
+
+
 
 
 
