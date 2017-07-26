@@ -25,7 +25,8 @@ function addNewOrder(customer,freight,total)
 	 	id   : newOrderId.toString(),
 		idCustomer : 	customer.toString(),
 		Freight  : freight.toString(),
-		Total: total.toString()
+        Total: total.toString(),
+        Status:"Em Análise"
 		
 	});
     tbPedidos.push(pedido);

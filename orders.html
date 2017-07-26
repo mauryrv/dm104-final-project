@@ -23,7 +23,7 @@
 <body>
         
         <div class="header">
-            <h1>Meus Pedidos</h1>
+            <h1>Relatório de Pedidos</h1>
         
         </div>
 
@@ -37,7 +37,7 @@
                 <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
                     <a href="cart.html" class="pure-menu-link">Meu Carrinho</a>
                 </li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Meus Pedidos</a></li>
+                <li class="pure-menu-item"><a href="orders.html" class="pure-menu-link">Meus Pedidos</a></li>
                 <li class="pure-menu-item"><a href="editUser.html" class="pure-menu-link">Minha Conta</a></li>
                 <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">Sobre</a></li>
                 <li class="pure-menu-item"><a href="#" onclick="endSession()" class="pure-menu-link">Sair</a></li>
@@ -48,163 +48,16 @@
     <div class="content">
 
     <div class="well" id="mainDiv">
-        <div class="page-header">
-            
-            <a href="#" onclick="toggle('maisinfo');">Mais Pedidos</a>
-        </div>
-
-        <div id="maisinfo" style="display:none">
-            <table class="table" >
-
-                <tr>
-                    <th>
-                        Produto
-                    </th>
-
-                    <th>
-                        Quantidade
-                    </th>
-
-                    <th>
-                        Valor unitário
-                    </th>
-                    <th>
-                        Valor total
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        Tenis 1
-                    </td>
-
-                    <td>
-                        4
-                    </td>
-
-                    <td>
-                        Rs. 200
-                    </td>
-                    <td>
-                        Rs. 400
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Tenis 2
-                    </td>
-                    <td>
-                        4
-                    </td>
-
-                    <td>
-                        Rs. 500
-                    </td>
-                    <td>
-                        Rs. 500
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Tenis 3
-                    </td>
-                    <td>
-                    2
-                    </td>
-
-                    <td>
-                        Rs. 250
-                    </td>
-                    <td>
-                        Rs. 250
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="page-header">
-            
-            <a href="#" onclick="toggle('maisinfo2');">Mais Pedidos 2</a>
-        </div>
-         <div id="maisinfo2" style="display:none">
-            <table class="table">
-
-                <tr>
-                    <th>
-                        Produto
-                    </th>
-
-                    <th>
-                    Quantidade
-                    </th>
-
-                    <th>
-                        Valor unitário
-                    </th>
-                    <th>
-                        Valor total
-                    </th>
-                </tr>
-
-                <tr>
-                    <td>
-                        Tenis 1
-                    </td>
-
-                    <td>
-                    2
-                    </td>
-
-                    <td>
-                        Rs. 200
-                    </td>
-                    <td>
-                        Rs. 400
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Tenis 2
-                    </td>
-                    <td>
-                    2
-                    </td>
-
-                    <td>
-                        Rs. 500
-                    </td>
-                    <td>
-                        Rs. 500
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Tenis 3
-                    </td>
-                    <td>
-                    2
-                    </td>
-
-                    <td>
-                        Rs. 250
-                    </td>
-                    <td>
-                        Rs. 250
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-
-
+    </div>
 </body>
-        <script src="node_modules/jquery/dist/jquery.min.js"></script>  
-
+    
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="app/genController.js"></script>
 <script src="app/userDAO.js"></script>
 <script src="app/indexDAO.js"></script>
 <script src="app/orderDAO.js"></script>
 <script src="app/orderController.js"></script>
+ 
 
 <script>
     verifySession()
