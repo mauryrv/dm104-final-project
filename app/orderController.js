@@ -47,7 +47,7 @@ function listOrders()
                 var product = getProductInfo(pedidoProd.idProduct);
                 tr = $("<tr>")
                 cols = ""
-                cols += "<td>"+product.nome+"</td>";
+                cols += "<td><input type=\"image\" src=\""+product.image+"\" width=\"50px\">"+product.nome+"</td>";
 		        cols += "<td> "+pedidoProd.qty+"</td>";
 	            cols += "<td>R$ "+product.valor+"</td>";
                 cols += "<td>R$ "+(pedidoProd.qty*parseInt(product.valor)).toFixed(2)+"</td>";

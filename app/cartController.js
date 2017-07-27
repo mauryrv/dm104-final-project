@@ -21,12 +21,14 @@ function list()
     for(var i in tbCarrinho){
 	
 		var cart = JSON.parse(tbCarrinho[i]);
-		//montar table de pedidos
+        //montar table de pedidos
+        console.log(cart);
 		var product = getProductInfo(cart.idProduct);
 		var newRow = $("<tr>");
     	var cols = "";
-
-		cols += "<td>"+product.nome+"</td>";
+        console.log(product.image);
+        console.log(product.nome);
+		cols += "<td><input type=\"image\" src=\""+product.image+"\" width=\"50px\"> "+product.nome+"</td>";
 		cols += "<td> <link class=\"glyphicon glyphicon-minus\" onclick=\"subtractItemQty("+cart.idProduct+","+i+","+cart.Qty+")\"/><input type=\"text\" value=\""+cart.Qty+"\" size=\"1px\" disabled/><link class=\"glyphicon glyphicon-plus\" onclick=\"addItemQty("+cart.idProduct+","+i+","+cart.Qty+")\"/></td>";
 		cols += "<td>"+product.valor+"</td>";
         cols += "<td>"+(cart.Qty*parseInt(product.valor)).toFixed(2)+"</td>";

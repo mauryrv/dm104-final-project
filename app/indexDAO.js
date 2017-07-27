@@ -97,7 +97,7 @@ function getProductInfo(id)
         var produto = tbProduto[i];
  
             
-        if(produto.id = id){
+        if(produto.id == id){
             retunProduto = tbProduto[i];
         }
 

@@ -2,13 +2,13 @@
   "name": "final-project",
   "version": "1.0.0",
   "description": "Final project of class DM104",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node app/index.js"
+    "start": "node app/indexControllers.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mauryrv/dm104-final-project.git"
+    "url": "https://github.com/mauryrv/dm104-final-project.git"
   },
   "author": "Maury Viana",
   "license": "MIT",

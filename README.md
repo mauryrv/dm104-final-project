@@ -1,2 +1,2 @@
-# http://dm104-final-project.github.io
+# dm104-final-project
 Final project of DM104 class.
