@@ -8,42 +8,66 @@ function createData(){
 
 const products = [
 {   "id":"1",
-    "nome":"tenis 1",
-    "valor":"34,00"
+    "nome":"Tênis Asics Masculino",
+    "valor":"459,90",
+    "image":"Images/tenis_asics.jpg"
 },
 {   "id":"2",
-    "nome":"tenis 2",
-    "valor":"34,00"
+    "nome":"Tênis Nike Masculino",
+    "valor":"229,90",
+    "image":"Images/tenis_nike.jpg"
 },
 {   "id":"3",
-    "nome":"tenis 3",
-    "valor":"34,00"
+    "nome":"Tênis Adidas Masculino",
+    "valor":"199,90",
+    "image":"Images/tenis_adidas.jpg"
 },
 {   "id":"4",
-    "nome":"tenis 4",
-    "valor":"34,00"
+    "nome":"Tênis Adidas Masculino",
+    "valor":"99,90",
+    "image":"Images/tenis_adidas2.jpg"
 },
 {   "id":"5",
-    "nome":"tenis 5",
-    "valor":"34,00"
+    "nome":"Tênis Nike Masculino",
+    "valor":"99,90",
+    "image":"Images/tenis_nike2.jpg"
 },
 {   "id":"6",
-    "nome":"tenis 6",
-    "valor":"34,00"
+    "nome":"Tênis Adidas Feminino",
+    "valor":"99,90",
+    "image":"Images/tenis_adidas3.jpg"
 },
 {   "id":"7",
-    "nome":"tenis 7",
-    "valor":"34,00"
+    "nome":"Tênis Asics Masculino",
+    "valor":"99,90",
+    "image":"Images/tenis_asics2.jpg"
 },
 {   "id":"8",
-    "nome":"tenis 8",
-    "valor":"34,00"
+    "nome":"Tênis Nike Feminino",
+    "valor":"199,90",
+    "image":"Images/tenis_nike3.jpg"
 },
 {   "id":"9",
-    "nome":"tenis 9",
-    "valor":"34,00"
+    "nome":"Tênis Asics Feminino",
+    "valor":"149,90",
+    "image":"Images/tenis_asics3.jpg"
+},
+{   "id":"10",
+    "nome":"Tênis Adidas Masculino",
+    "valor":"125,00",
+    "image":"Images/tenis_adidas4.jpg"
 }
-
+,
+{   "id":"11",
+    "nome":"Tênis Nike Masculino",
+    "valor":"149,00",
+    "image":"Images/tenis_nike4.jpg"
+},
+{   "id":"12",
+    "nome":"Tênis Asics Feminino",
+    "valor":"89,00",
+    "image":"Images/tenis_asics4.jpg"
+}
 ]
 
 for(let i=0;i<products.length;i++){

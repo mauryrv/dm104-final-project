@@ -38,7 +38,6 @@ function listOrders()
 
         $("#mainDiv").append(d2);
 
-
         for(var j in tbPedidoProdutos){
             
             var pedidoProd = JSON.parse(tbPedidoProdutos[j]);

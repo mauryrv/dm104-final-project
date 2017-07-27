@@ -140,11 +140,28 @@
     <script src="app/IndexDAO.js"></script>
     <script src="app/CartDAO.js"></script>
     <script src="app/CartController.js"></script>
+    <script src="app/CorreiosService.js"></script>
+    <script src="app/CorreiosController.js"></script>
     
 
     <script>
     verifySession()
     OnLoadCart()
+
+    function calculateShippingValue(){
+
+        CorreiosController.calculateShippingValue(function(response){
+            if(response.erro != '-3'){
+                console.log(response.valor)
+                              
+
+            } else{
+                document.getElementById('checkoutFlag').value = '0';
+                alert('Erro. O CEP mencionado nao é valido.');
+               
+            }
+        })
+}
     </script>
 </html>
 

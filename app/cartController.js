@@ -106,3 +106,7 @@ deleteItem(index)
 window.location.assign("cart.html")
 
 }
+
+
+
+
