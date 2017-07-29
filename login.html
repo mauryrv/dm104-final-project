@@ -95,10 +95,16 @@
                                         <input type="text" class="form-control" name="lastname" id="txtCpf" placeholder="Apenas números, ex: 00011122233">
                                     </div>
                                 </div>
+                                  <div class="form-group">
+                                    <label for="cep" class="col-md-3 control-label">Cep</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="cep" id="txtCep">
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label for="endereco" class="col-md-3 control-label">Endereço</label>
                                     <div class="col-md-9">
-                                        <input type="text" class="form-control" name="endereco" id="txtAddress" placeholder="Ex: Rua, Nº, Bairro, Cidade, Estado">
+                                        <input type="text" class="form-control" name="endereco" id="txtAddress" disabled>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -149,6 +155,22 @@
   <script src="app/genController.js"></script>
   <script>
       clearCartTable();
+
+      jQuery(function($){
+   $("#txtCep").change(function(){
+      var cep_code = $(this).val();
+      if( cep_code.length <= 0 ) return;
+      $.get("http://apps.widenet.com.br/busca-cep/api/cep.json", { code: cep_code },
+         function(result){
+            if( result.status!=1 ){
+               alert(result.message || "Houve um erro desconhecido");
+               return;
+            }
+            $("input#txtAddress").val( result.address+"-" +result.city+"-"+result.state );
+       
+         });
+   });
+});
 </script>
 
   

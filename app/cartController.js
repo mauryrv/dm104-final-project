@@ -1,5 +1,5 @@
 var total=0;
-var freight =0;
+var freight =10;
 function buy(id)
 {
     if(!checkItemInCart(id))
@@ -49,23 +49,12 @@ function calcTotal()
                
 
         }
+            total=total+10;
             document.getElementById("totalValue").innerHTML ="R$ "+total.toFixed(2);
 
 }
 
-function calcFreight()
-{
-    freight = 10 //peggar com api dos correios
 
-    
-   //fnConsomeWs()
-    //calculateShip();
-    document.getElementById("freightValue").innerHTML ="R$ "+freight.toFixed(2);
-    total = total + freight;
-    document.getElementById("totalValue").innerHTML ="R$ "+total.toFixed(2);
- 
-   
-}
 
 function finishOrder()
 {
@@ -89,7 +78,7 @@ else
     }
 
     window.location.assign("cart.html")
-//OnLoadCart()
+
 }
 
 function addItemQty(id,index,qty){
@@ -106,74 +95,5 @@ function deleteCartIItem(index)
 {
 deleteItem(index)
 window.location.assign("cart.html")
-
-}
-
-function calculateShip () {
-        var url1 = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?"
-        + "nCdEmpresa="
-        + "&sDsSenha="
-        + "&sCepOrigem=02724070"
-        + "&sCepDestino=71939360"
-        + "&nVlPeso=1"
-        + "&nCdFormato=1"
-        + "&nVlComprimento=20"
-        + "&nVlAltura=5"
-        + "&nVlLargura=15"
-        + "&sCdMaoPropria=s"
-        + "&nVlValorDeclarado=200"
-        + "&sCdAvisoRecebimento=s"
-        + "&nCdServico=41106"
-        + "&nVlDiametro=0"
-        + "&StrRetorno=xml";  
-        
-        console.log(url1)
-
-
-$.ajax({
-  url: url1,
-  
-  success: function (data) { 
-      console.log(data)
-    
-    
-    /* data contém o que foi retornado pelo webservice */; }
- });
-       
-}
-
-
-function fnConsomeWs() {
-
-var sendjson = {   
-    "nCdEmpresa":"",
-    "sDsSenha":"",
-    "nCdServico":"41106",
-    "sCepOrigem":"02724070",
-    "sCepDestino":"71939360",
-    "nVlPeso":"1",
-    "nCdFormato":"1",
-    "nVlComprimento":"20",
-    "nVlAltura":"5",
-    "nVlLargura":"15",
-    "nVlDiametro":"0",
-    "sCdMaoPropria":"s",
-    "nVlValorDeclarado":"200",
-    "sCdAvisoRecebimento":"s"
-}
-
-
-$.ajax({
-  type: "POST",
-  //contentType: "application/json; charset=utf-8",
-  url: "http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx/CalcPrecoPrazo",
-  data: sendjson,
-  assync : false ,
-  crossdomain : false,
-  dataType: "jsonp",
-  success: function (data) {
-            console.log(data);
-        }
-});
 
 }

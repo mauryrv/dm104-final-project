@@ -18,6 +18,7 @@ function addCustomer(){
 		Cpf  : $("#txtCpf").val(),
 		Email: $("#txtMail").val(),
 		Address:$("#txtAddress").val(),
+		Cep: $("#txtCep").val(),
 		Password:$("#txtPassword").val()
 		
 		
@@ -36,6 +37,7 @@ function editCustomer(userId){
 		Name : 	$("#txtName").val(),
 		Cpf  : $("#txtCpf").val(),
 		Email: $("#txtMail").val(),
+		Cep: $("#txtCep").val(),
 		Address:$("#txtAddress").val(),
 		Password:$("#txtPassword").val()
 		
@@ -110,6 +112,7 @@ function getUser(id){
 			$("#txtName").val(cli.Name)
 			$("#txtCpf").val(cli.Cpf) 
 			$("#txtMail").val(cli.Email)
+			$("#txtCep").val(cli.Cep)
 			$("#txtAddress").val(cli.Address)
 			$("#txtPassword").val(cli.Password)
 			$("#txtPassword2").val(cli.Password)
