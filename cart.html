@@ -6,149 +6,163 @@
     <meta name="description" content="A layout example with a side menu that hides on mobile, just like the Pure website.">
     <title>Tenis Store</title>
     
+    <!-- GLOBAL STYLES - Include these on every page. -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    
-    
-        <!--[if lte IE 8]>
-            <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
-        <![endif]-->
-        <!--[if gt IE 8]><!-->
-            <link rel="stylesheet" href="css/side-menu.css">
-        <!--<![endif]-->
 
+    <!-- THEME STYLES - Include these on every page. -->
+    <link href="css/style.css" rel="stylesheet">
+    <!--<![endif]-->
 </head>
 <body>
 
-    <div id="layout">
-    <!-- Menu toggle -->
-    <a href="#menu" id="menuLink" class="menu-link">
-        <!-- Hamburger icon -->
-        <span></span>
-    </a>
+    <div class="wrapper">
 
-    <div id="menu">
-        <div class="pure-menu">
-            <a class="pure-menu-heading" href="#">Tenis Store</a>
-  <div id="user" style="background-color:whitesmoke">
-            <span class="atom-icon icon-customer">
-                <img title='Tênis Asics Masculino' src='Images/icon-user.png' width="35" height="35" />
-            </span>
-            <div id="perfilTitle" class="title" style="color:#1f8dd6"></div>
+        <!-- begin TOP NAVIGATION -->
+        <nav class="navbar-top" role="navigation">
+
+            <!-- begin BRAND HEADING -->
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a href="index.html">
+                        <img src="Images/logo_store.jpg" data-1x="Images/logo_store@1x.jpg" data-2x="Images/logo_store@2x.jpg" class="img-responsive" alt="" width="275" height="50">
+                    </a>
+                </div>
             </div>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
-                    <a href="cart.html" class="pure-menu-link">Meu Carrinho</a>
-                </li>
-                <li class="pure-menu-item"><a href="orders.html" class="pure-menu-link">Meus Pedidos</a></li>
-                <li class="pure-menu-item"><a href="editUser.html" class="pure-menu-link">Minha Conta</a></li>
-                <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">Sobre</a></li>
-                <li class="pure-menu-item"><a href="#" onclick="endSession()" class="pure-menu-link">Sair</a></li>
-            </ul>
-        </div>
-    </div>
+            <!-- end BRAND HEADING -->
 
-    <div id="main">
-        <div class="header">
-            <h1>Carrinho</h1>
+            <!-- /.nav-top -->
+        </nav>
+        <!-- /.navbar-top -->
+        <!-- end TOP NAVIGATION -->
+
+        <!-- begin SIDE NAVIGATION -->
+        <nav class="navbar-side" role="navigation">
+            <div class="navbar-collapse sidebar-collapse collapse">
+                <ul id="side" class="nav navbar-nav side-nav">
+                    <!-- begin SIDE NAV USER PANEL -->
+                    <li class="side-user hidden-xs">
+                        <img class="img-circle" src="Images/icon-user.png" width="100" height="100" alt="">
+                        <p class="welcome">
+                            <i class="fa fa-key"></i> Logged in as
+                        </p>
+                        <p id="perfilTitle" class="name tooltip-sidebar-logout">
+                        </p>
+                        
+                    </li>
+                    <!-- end SIDE NAV USER PANEL -->
+                    <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                        <a href="cart.html" class="pure-menu-link">Meu Carrinho</a>
+                    </li>
+
+                    <li class="pure-menu-item"><a href="orders.html" class="pure-menu-link">Meus Pedidos</a></li>
+                    <li class="pure-menu-item"><a href="editUser.html" class="pure-menu-link">Minha Conta</a></li>
+                    <li class="pure-menu-item"><a href="about.html" class="pure-menu-link">Sobre</a></li>
+                    <li class="pure-menu-item"><a href="#" onclick="endSession()" class="pure-menu-link">Sair</a></li>
+                </ul>
+
+
+                <!-- /.side-nav -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <!-- /.navbar-side -->
+        <!-- end SIDE NAVIGATION -->
+
+        <!-- begin MAIN PAGE CONTENT -->
+        <div class="page-wrapper">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-title">
+                            <h1>TENIS STORE
+                                <small>Os melhores preços você encontra aqui!</small>
+                            </h1>
+                            <ol class="breadcrumb">
+                                <li class="active"><i class="fa fa-dashboard"></i> Meu Carrinho</li>                            
+                            </ol>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+               
+                <div class="page-header">
+                    <h3>Itens</h3>
+                </div>
         
+                <table class="table" id="tbCartItens">
+
+                    <tr>
+                        <th>
+                            Produto
+                        </th>
+
+                        <th>
+                        Quantidade
+                        </th>
+
+                        <th>
+                            Valor unitário
+                        </th>
+                        <th>
+                            Valor total
+                        </th>
+
+                    
+                    </tr>
+
+                </table>
+
+                <div class="page-header">
+                    <h3>Resumo</h3>
+                </div>
+                <table class="table" >
+
+                    <tr>
+                        <td>
+                            <b>Valor frete:</b>
+                        </td>
+                        <td>
+                            <b><label id="freightValue"/>R$ 10.00</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Total:</b>
+                        </td>
+                        <td>
+                            <b><label id="totalValue"/></b>
+                        
+                        </td>
+                    </tr>
+                </table>
+                
+                <div class="text-left">                      
+                    <a type="button" class="btn btn-danger" onclick="finishOrder()" >Finalizar <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+                </div>
+            </div>
         </div>
+    </div>        
 
-        <div class="content">
-
-        <div class="well">
-        <div class="page-header">
-            <h3>Itens</h3>
-        </div>
- 
-        <table class="table" id="tbCartItens">
-
-            <tr>
-                <th>
-                    Produto
-                </th>
-
-                <th>
-                   Quantidade
-                </th>
-
-                <th>
-                    Valor unitário
-                </th>
-                <th>
-                    Valor total
-                </th>
-
-            
-            </tr>
-
-        </table>
-
-         <div class="page-header">
-            <h3>Resumo</h3>
-        </div>
-        <table class="table" >
-
-            <tr>
-                <td>
-                    <b>Valor frete:</b>
-                </td>
-                <td>
-                    <b><label id="freightValue"/>R$ 10.00</b>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Total:</b>
-                </td>
-                <td>
-                     <b><label id="totalValue"/></b>
-                   
-                </td>
-            </tr>
-        </table>
-
-       <!-- <div class="text-left">
-            <a type="button" class="btn btn-danger" onclick="calcFreight()" >Calcular <span aria-hidden="true"></span></a>
-        </div>-->
-
-    </div>
-
-
-        <div class="text-left">
-                      
-            <a type="button" class="btn btn-danger" onclick="finishOrder()" >Finalizar <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-        </div>
-    </div>
-</div>
-
-   
-</div>
 </body>
 
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>  
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="external-js/ui.js"></script>
-    <script src="app/UserDAO.js"></script>
+    <script src="app/userDAO.js"></script>
     <script src="app/genController.js"></script>
-    <script src="app/OrderDAO.js"></script>
-    <script src="app/IndexDAO.js"></script>
-    <script src="app/CartDAO.js"></script>
-    <script src="app/CartController.js"></script>
+    <script src="app/orderDAO.js"></script>
+    <script src="app/indexDAO.js"></script>
+    <script src="app/cartDAO.js"></script>
+    <script src="app/cartController.js"></script>
 
     <script>
-    verifySession()
-    OnLoadCart()
-    showUser()
+        verifySession()
+        OnLoadCart()
+        showUser()
     </script>
 </html>
-
-
-
-
-
-
-
